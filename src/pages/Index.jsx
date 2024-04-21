@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Image, Input, Text, VStack } from "@chakra-ui/react";
 import { FaArrowRight, FaPhone, FaSolarPanel } from "react-icons/fa";
 
 const Index = () => {
@@ -42,6 +42,21 @@ const Index = () => {
           <Text textAlign="center">Our panels are designed for maximum efficiency, ensuring you get the most out of every ray of sunshine.</Text>
         </VStack>
       </Flex>
+      <Container maxW="container.md" p={10} mt={10} bg="gray.50" borderRadius="lg">
+        <VStack spacing={5} as="form">
+          <Heading as="h3" size="lg">
+            Get a Quote
+          </Heading>
+          <Text>Fill out the form below and we will get back to you shortly.</Text>
+          <Input placeholder="Your Name" />
+          <Input placeholder="Your Email" type="email" />
+          <Input placeholder="Annual Electricity Consumption (kWh)" />
+          <Input placeholder="Size of Main Fuse (Amps)" />
+          <Button type="submit" colorScheme="orange" size="lg" mt={4}>
+            Submit
+          </Button>
+        </VStack>
+      </Container>
     </Container>
   );
 };
